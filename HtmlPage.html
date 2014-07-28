@@ -2,50 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>String-Manupulation</title>
-    <script src="HtmlPage.js" ></script>
-    <script>  
-        function stringManupulation() 
-          {
-              var e = document.getElementById("selectOp");
-              var operation = e.options[e.selectedIndex].value;
-              var first ,second;
-
-                 
-               var one = new strings1(document.getElementById("string1").value);
-
-                  
-                 
-                
-                if(operation=="Concat")
-                {
-                  one.concatstrings(document.getElementById("string2").value);
-                }
-                if(operation=="Length")
-                {
-                   one.lengthCal();
-                }
-                if(operation=="Substring")
-                {
-                  one.getSubstring();
-                }
-                if(operation=="CharAt")
-                {
-                  one.getCharAt();                    
-                }
-                if(operation=="LastIndexOf")
-                {
-                  one.getLastIndexOf(document.getElementById("string2").value);
-                }
-                if(operation=="IndexOf")
-                {
-                    one.getIndexOf(document.getElementById("string2").value);
-                }
-                if(operation=="Replace")
-                {
-                  one.getReplace(document.getElementById("index1").value,document.getElementById("index2").value);
-                }
-              }
-      </script>
+    
 </head>
   <body>
     <form>
@@ -59,16 +16,16 @@
                 <option id="IndexOf">IndexOf</option>
                 <option id="Replace">Replace</option>
             </select><p></p>
-            <p>->For Replace add the to be replaced and replaced with index 1 and 2 respectively. </p>
-            <p>-></p>
             String 1:<input type="text" id="string1" ><p></p>
             String 2:<input type="text" id="string2" ><p></p>
             Index  1:<input type="text" id="index1" ><p></p>
             Index  2:<input type="text" id="index2" ><p></p>
             <p></p>
-            OUTPUT:<input type="text" id="output" >
+            OUTPUT :<label  id="output" ></label>
             <p></p><p></p>
-            <button type="button" onclick="stringManupulation()" >Submit</button>
-    </form>            
+            <button type="button"  id="button1" >Submit</button>
+    </form>      
+    <script src="HtmlPage.js" ></script>
+      
   </body>
 </html>
