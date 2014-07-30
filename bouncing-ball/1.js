@@ -20,8 +20,8 @@ var newBall=function(){
     
  }
  var moveBall = function(){
- 	window.alert("move ball");
- 	window.alert("ballno:"+ballno);
+ 	//window.alert("move ball");
+ 	//window.alert("ballno:"+ballno);
     for(var i =0; i < ballno;i++)
     {
         wd = window.innerWidth-15;
