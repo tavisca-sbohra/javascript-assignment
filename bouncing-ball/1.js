@@ -4,17 +4,9 @@ var wd=window.innerWidth;
 var dx=new Array();
 var dy=new Array();
 
-
-var ball = function(){
-    this.xstart = Math.ceil((Math.random()*100));
-    this.ystart = Math.ceil((Math.random()*100));
-    this.addBalls= newBall.call(this);
-}
-
 var newBall=function(){
     var addnewBall = document.createElement("div");
-    addnewBall.id = "ball"+ballno;
-    ballno++;
+    addnewBall.id = "ball"+ballno;ballno++;
     dx.push(Math.random()*5);
     dy.push(Math.random()*5);
     addnewBall.style.width="20px";
@@ -34,7 +26,6 @@ var newBall=function(){
     {
         wd = window.innerWidth-15;
         ht = window.innerHeight-15;
-
         var divId = "ball"+i;
         var ballB = document.getElementById(divId);
         var x = parseInt(ballB.style.left,10);
@@ -48,10 +39,17 @@ var newBall=function(){
     }
 }
 
-window.onload =function(){
-	setInterval(moveBall,40);
+
+var ball = function(){
+    this.xstart = Math.ceil((Math.random()*100)+10);
+    this.ystart = Math.ceil((Math.random()*100)+10);
+    this.addBalls= newBall.call(this);
 }
 
-window.onclick=function(){
+window.onload =function(){
+	setInterval(moveBall,100);
+}
+
+window.onkeypress=function(){
 	var b=new ball;
 }
