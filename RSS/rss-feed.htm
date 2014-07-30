@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	    
+	    <title>RSS Feeds</title>
+	    
+	    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+	    <link href="css/bootstrap.css" rel="stylesheet" />
+	    <link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="rss-feed.css"/>
+
+		<script src="rss-feed.js"></script>
+	</head>
+<body id="body1">
+<div  id="maindiv">
+<!-- style="background:#DA635D;"<h1>RSS-feed</h1> -->
+	<div id="header-h">
+		<div>
+			<h1 id="h1id">Rss Feed Reader 1.0 !</h1>
+		</div>
+		<div id="optionid">
+			<label id="welcome">Welcome To Rss Reader!!</label><label id="feedurl">choose category:</label>
+			
+			<select id="selectedElement" onchange="showFeed()">
+				<option>Categories</option>
+				<option id="site1" value="http://dev-mystique.tavisca.com/api/deals/all?token=1t0d2p1341mpfiaicjwq155e&$filter=Type eq 'hotel'">Hotel</option>
+				<option id="site2" value="http://dev-mystique.tavisca.com/api/deals/all?token=1t0d2p1341mpfiaicjwq155e&$filter=Type eq 'car'">Car</option>
+				<option id="site3" value="http://dev-mystique.tavisca.com/api/deals/all?token=1t0d2p1341mpfiaicjwq155e&$filter=Type eq 'activity'">activity</option>
+				<option id="site4" value="http://dev-mystique.tavisca.com/api/deals/all?token=1t0d2p1341mpfiaicjwq155e&$filter=Type eq 'flight'">Flight</option>
+			</select>
+		</div>
+	</div>
+	<!-- <div><textarea id="displayAll" cols="150" rows="10" > </textarea></div> -->
+	<div id="container">
+		
+	</div>
+	<footer id="footer-f">
+		
+	</footer>
+	</div>
+</body>
+</html>
+
